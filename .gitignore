@@ -1,3 +1,4 @@
+config.py
 *.rbc
 capybara-*.html
 .rspec

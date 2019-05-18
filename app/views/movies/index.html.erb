@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Movies</h1>
+
+
+<%= form_tag(movies_path, method: 'get', id: 'search-form', class: "md-form form-sm form-2 pl-0", style: 'padding: 0; !important' )do %>
+    <div class='input-group'>
+     <%= text_field_tag :title, nil, placeholder: 'Movie Title', class: 'form-control my-0 py-1', required: true %>
+     <%= button_tag raw('<span>SEARCH</span>'), name: nil, class:'input-group-text', 'data-text': 'SEARCH' %>
+    </div>
+<% end %>
+<%= render 'partials/movies', movies: @movies %>
